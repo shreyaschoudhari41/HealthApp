@@ -4,7 +4,8 @@ import Forms from "./Components/Forms";
 import Navbar from "./Components/Navbar";
 import News from "./Components/News";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Emergency from "./Components/Emergency";
 
 function App() {
   return (
@@ -22,10 +23,4 @@ function App() {
   );
 }
 
-function Emergency() {
-
-  <div>
-  <Link to={{pathname : "https://www.who.int/emergencies/situations"}}></Link>
-  </div>
-}
 export default App;
