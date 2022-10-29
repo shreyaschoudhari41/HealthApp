@@ -11,7 +11,7 @@ function News() {
 
   const getdata = async (pageNum) => {
     let apikey =
-    `https://newsapi.org/v2/top-headlines?country=in&apiKey=41b21c29b4e24dc48e597aab802a8e7e&category=health&pageSize=9&page=${pageNum}`;
+    `https://newsapi.org/v2/top-headlines?country=in&apiKey={apiKey}&category=health&pageSize=9&page=${pageNum}`;
     // seturl(apikey);
     let data = await fetch(apikey);
     let parsed_data = await data.json();
