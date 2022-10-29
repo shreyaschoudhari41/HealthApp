@@ -2,9 +2,25 @@ import React from "react";
 import{Link} from "react-router-dom"
 
 function Navbar() {
+
+  const Diabetes = ()=>{
+    window.open("https://www.who.int/news-room/fact-sheets/detail/diabetes","_blanlk");
+  }
+
+  const Bloodpressure = ()=>{
+    window.open("https://www.cdc.gov/bloodpressure/about.htm","_blank");
+  }
+
+  const HeartAttack = ()=>{
+    window.open("https://www.mayoclinic.org/diseases-conditions/heart-attack/symptoms-causes/syc-20373106","_blank");
+  }
+
+  const Malaria = ()=>{
+    window.open("https://www.who.int/news-room/fact-sheets/detail/malaria","_blank");
+  }
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+      <nav className="navbar navbar-expand-lg navbar-dark  text-light" style={{backgroundColor:"#58515173"}}>
       <a className="navbar-brand mx-2" href="/">Health App</a>
         {/* <h4 className="mx-2"></h4> */}
         <button
@@ -36,11 +52,6 @@ function Navbar() {
                 Health Emergencies<span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li className="nav-item active mx-2">
-              <Link className="nav-link" to="#">
-                Covid-19<span className="sr-only">(current)</span>
-              </Link>
-            </li>
 
             <li className="nav-item dropdown mx-2">
               <Link
@@ -52,24 +63,21 @@ function Navbar() {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Navigate
+                Most Common Diseases
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" to="#">
+                <Link className="dropdown-item" onClick={Diabetes}>
                   Diabetes
                 </Link>
-                <Link className="dropdown-item" to="#">
+                <Link className="dropdown-item"  onClick={Bloodpressure}>
                   Blood Pressure
                 </Link>
-                {/* <div className="dropdown-divider"></div> */}
-                <Link className="dropdown-item" to="#">
+                
+                <Link className="dropdown-item"  onClick={HeartAttack}>
                   Heart Attack
                 </Link>
-                <Link className="dropdown-item" to="#">
+                <Link className="dropdown-item"  onClick={Malaria}>
                   Malaria
-                </Link>
-                <Link className="dropdown-item" to="#">
-                  Asthama
                 </Link>
               </div>
             </li>
